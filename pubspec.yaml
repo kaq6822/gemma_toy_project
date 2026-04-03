@@ -1,0 +1,50 @@
+name: gemma_chat
+description: "Gemma on-device chatbot app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Gemma On-Device
+  flutter_gemma: ^0.13.0
+
+  # State Management (manual providers, no codegen)
+  flutter_riverpod: ^3.3.1
+
+  # Local Database
+  drift: ^2.32.1
+  drift_flutter: ^0.3.0
+  path_provider: ^2.1.5
+
+  # Navigation
+  go_router: ^17.2.0
+
+  # File/Image Picking
+  image_picker: ^1.2.1
+  file_picker: ^10.3.10
+
+  # Settings Storage
+  shared_preferences: ^2.3.4
+
+  # Utilities
+  uuid: ^4.5.1
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # Code Generation (drift only)
+  drift_dev: ^2.32.1
+  build_runner: ^2.4.13
+
+flutter:
+  uses-material-design: true
