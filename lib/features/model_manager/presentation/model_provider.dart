@@ -1,4 +1,3 @@
-import 'package:flutter_gemma/flutter_gemma.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/model_repository.dart';
 
@@ -42,18 +41,7 @@ final modelStateProvider =
 class ModelNotifier extends Notifier<ModelState> {
   @override
   ModelState build() {
-    _checkActiveModel();
     return const ModelState();
-  }
-
-  Future<void> _checkActiveModel() async {
-    try {
-      if (FlutterGemma.hasActiveModel()) {
-        state = state.copyWith(status: ModelStatus.ready);
-      }
-    } catch (_) {
-      // Not initialized yet
-    }
   }
 
   Future<void> initializeAndLoadModel(String modelId,
